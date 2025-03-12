@@ -4,9 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV en ligne de Aziz Ayyad - Développeur Web et Web Mobile">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CV - Prénom Nom</title>
+    <!-- Lien vers les icônes et autres ressources nécessaires -->
 </head>
+
 <body>
-    
+<section class="contener-principal">
+<!-- Header: Informations de contact et photo -->
+<header>
+    <section class="header-container">
+        <!-- Photo de profil à gauche -->
+        <div class="photo">
+            <a href="./images/Photo d'identité.jpg" target="_blank">
+                <img src="./images/Photo d'identité.jpg" alt="photo de profil" class="photo-profil">
+            </a>
+        </div>
+
+        <!-- Informations de contact à droite -->
+        <div class="info">
+            <h1>Aziz Ayyad</h1>
+            <h2>Développeur Web et Web Mobile</h2>
+
+            <!-- Informations de contact avec disposition en deux colonnes -->
+            <div class="contact">
+                <div class="contact-col">
+                    <!-- Icône mail cliquable -->
+                    <a href="mailto:mxxxxxxx@XXXXXXXXX.fr">
+                        <img src="./images/envelope-solid.svg" alt="Mail" class="icon">
+                        <span>Mail</span>
+                    </a>
+                   <!-- Icône téléphone cliquable -->
+                    <a href="tel:+336XXXXXXXX">
+                        <img src="./images/Combiné.svg" alt="Téléphone" class="icon">
+                        <span>Téléphone</span>
+                    </a>
+                </div>
+
+                <div class="contact-col">
+
+                    <!-- Icône adresse cliquable -->
+                    <a href="https://maps.app.goo.gl/hd5npDTAXvQa3scf6">
+                        <img src="./images/house-solid.svg" alt="Adresse" class="icon">
+                        <span>Adresse</span>
+                    </a>
+                    
+                    <!-- Icône permis B sans texte -->
+                    <img src="./images/car-solid.svg" alt="Permis B" class="icon">
+                    <span>Permis B</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+    <main>
+        <!-- Compétences : Section sur les compétences -->
+         <div class="container">
+                <div class="left-side">
+                    <section id="competences">
+                        <h2>Compétences</h2>
+                        <hr class="small-hr">
+                            <ul  class="skills">
+                                <li>HTML<span class="stars">★★★★☆</span></li>
+                                <li>CSS<span class="stars">★★★★☆</span></li>
+                                <li>JavaScript<span class="stars">★★☆☆☆</span></li>
+                                <li>PHP<span class="stars">★☆☆☆☆</span></li>
+                            </ul>
+                        <h2>Langues</h2>
+                        <hr class="small-hr">
+                            <ul class="skills">
+                                <li>Français : Langue maternelle</li>
+                                <li>Anglais : Notion scolaire</li>
+                            </ul>
+                            <section id="qualites">
+                                <h2>Qualités</h2>
+                                <hr class="small-hr">
+                                    <div class="square">
+                                        <ul class="skills">
+                                            <li>Esprit d'équipe</li>
+                                            <li>Autonomie</li>
+                                            <li>Organisation</li>
+                                            <li>Créativité</li>
+                                        </ul>
+                                    </div>                                
+                            </section>                            
+                            <section id="centres-interet">
+                                <h2>Centres d'intérêt</h2>
+                                <hr class="small-hr">
+                                    <div class="square">
+                                        <ul class="skills">
+                                            <li>Informatique</li>
+                                            <li>Foot en salle</li>
+                                            <li>Basket Ball</li>
+                                        </ul>
+                                    </div>
+                            </section>
+                    </section>
+                </div>
+            
+        <div class="right-side">
+            <!-- Profil : Petit paragraphe sur le profil -->
+            <section id="profil">
+            <h2>Profil</h2>
+            <hr class="small-hr">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed doloribus iste cumque odio! Sed voluptatum
+                    quidem cum quam aut voluptatum, consequuntur sint repellendus porro eaque unde delinit dicta perferendis magni
+                    debitis dolorem atque vitae voluptas. Cum magni doloribus eius tenetur!
+                </p>
+                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed doloribus iste cumque odio! Sed voluptatum
+                    quidem cum quam aut voluptatum, consequuntur sint repellendus porro eaque unde delinit dicta perferendis magni
+                    debitis dolorem atque vitae voluptas. Cum magni doloribus eius tenetur!
+                </p>
+            </section>
+            <!-- Formation : Détails sur la formation -->
+                <section id="formation">
+                    <h2>Formation</h2>
+                    <hr class="small-hr">
+                    <ul class="no-bullets">
+                        <li>Formation Développeur Web et Web Mobile (Full Stack) - Centre Européen de Formation <strong> 2025/2026 </strong></li>
+                        <li>1ère Année de BAC Pro Industries de Procédés au Lycée Ferdinand Buisson à Elbeuf <strong> 2000/2001 </strong></li>
+                        <li>B.E.P/C.A.P Industries Chimiques et Traitement des Eaux (Dominante Industrie Chimique) <strong> 1998/2000 </strong></li>
+                        <li>B.E.P.C <strong> 1996 </strong></li>
+                    </ul>
+                </section>   
+
+            <!-- Expérience professionnelle : Remplir avec les expériences tirées de ton CV -->
+            <section id="experience">
+                <h2>Expérience professionnelle</h2>
+                <hr class="small-hr">
+                <ul class="no-bullets">
+                    <li>Technicien d’Extraction B12 - EuroAPI, Saint Aubin Lés Elbeuf <strong> Janvier 2025 à ce jour </strong></li>
+                    <li>Projet B12 Ella Turbo - EuroAPI, Saint Aubin Lés Elbeuf <strong> Juin 2023 - Décembre 2024 </strong></li>
+                    <li>Technicien d’Extraction B12 - SANOFI CHIMIE, Saint Aubin Lès Elbeuf <strong> Juillet 2019 - Mai 2023 </strong></li>
+                    <li>Opérateur de Production en Fermentation - SANOFI CHIMIE <strong> Septembre 2018 - Juillet 2019 </strong></li>
+                    <li>Technicien d’Extraction B12 - SANOFI CHIMIE, Saint Aubin Lès Elbeuf <strong>Mars 2015 - Septembre 2018 </strong></li>
+                    <li>Technicien d’Extraction B12 - SANOFI CHIMIE, Saint Aubin Lès Elbeuf <strong> Juin 2010 - Février 2015 </strong></li>
+                    <li>Technicien d’Extraction B12 - SANOFI CHIMIE, Saint Aubin Lès Elbeuf <strong> Janvier 2009 - Juin 2010 </strong></li>
+                    <li>Technicien d’Extraction B12 - SANOFI CHIMIE, Saint Aubin Lès Elbeuf <strong> Décembre 2004 - Décembre 2008 </strong></li>
+                    <li>Conducteur Génie Chimique  - SCHNEIDER-ELECTRIC-INDUST, Vaudreuil <strong> Juin 2004 - Septembre 2004 </strong></li>
+                    <li>Opérateur Répartition  - INTERVET-PRODUCTION-SA, Igoville <strong> Mai 2004 -Mai 2004 </strong></li>
+                    <li>Opérateur de Production - ATOFINA, Serquigny <strong> Février - Avril 2004 </strong></li>
+                    <li>Opérateur de Production - YORKSHIRE, Oissel <strong> Juin - Septembre 2002 </strong></li>
+                    <li>Chargement, Filtration, Conditionnement d’Halquinol - ORGACHIM, Oissel <strong> Mars - Avril 2001 </strong></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    </main>
+    <!-- Footer : Liens et réseaux sociaux -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com"><img src="./images/github-brands.svg" alt="GitHub"></a>
+            <a href="https://instagram.com/"><img src="./images/instagram-brands.svg" alt="Instagram"></a>
+        </div>
+        <p>Mis à jour le : 11/03/2025</p>
+    </footer>
+</section>   
 </body>
+
 </html>
