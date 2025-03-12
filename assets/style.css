@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Raleway",sans-serif;
+    src: url(../fonts/Raleway-Regular.ttf) format('truetype');
+    src: url(../fonts/Raleway-Regular.woff2) format('woff2');
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-side, .left-side {
+        width: 100%;
+    }
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -9,35 +25,74 @@
     color: white;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
+}
+.photo-profil{
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Animation de zoom */
+    cursor: zoom-in; /* Change le curseur pour indiquer le zoom */
+}
+.photo-profil:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
 }
 .contact a, .contact span {
     margin: 0 15px; /* Espace horizontal entre chaque élément */
+    text-decoration: none;
+    color: white;
 }
 main h2{
     color: #17abb3;
 }
 h1, h2{
     font-family: 'Lato', sans-serif;
-    align-items: center;
+    align-items: baseline;
 }
 strong{
     text-align: right;
     color: #17abb3;
 }
-#formation ul.no-bullets li {
+/* Effet au survol des éléments de formation et d'expérience */
+#formation ul.no-bullets li,
+#experience ul.no-bullets li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* Espacement entre chaque élément */
-    line-height: 1.6; /* Augmente l'interligne pour aérer le texte */
+    margin-bottom: 10px;
+    line-height: 1.8;
+    position: relative; /* Nécessaire pour que ::before fonctionne */
+    padding: 10px 15px; /* Ajout d’un padding pour éviter que le texte touche le trait */
+    transition: background-color 0.3s ease-in-out;
 }
 
-#formation ul.no-bullets li span {
-    flex-basis: 70%; /* La formation prend 70% de l'espace disponible */
+/* Trait vertical à gauche */
+#formation ul.no-bullets li::before,
+#experience ul.no-bullets li::before {
+    content: "";
+    position: absolute; /* Permet de bien le placer */
+    left: 0; /* Aligné tout à gauche */
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: transparent; /* Caché par défaut */
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* Effet au survol */
+#formation ul.no-bullets li:hover,
+#experience ul.no-bullets li:hover {
+    background-color: #e3e3e3;
+}
+
+/* Apparition du trait bleu au survol */
+#formation ul.no-bullets li:hover::before,
+#experience ul.no-bullets li:hover::before {
+    background-color: #17abb3; /* Même couleur que les titres */
+}
 #formation ul.no-bullets li strong {
     flex-basis: 30%; /* La période prend 30% de l'espace disponible */
     text-align: right; /* Aligne la période à droite */
@@ -47,7 +102,7 @@ strong{
     justify-content: space-between;
     align-items: baseline;
     gap: 20px; /* Ajuste l'espace entre les éléments */
-    margin-bottom: 15px; /* Espacement entre chaque ligne */
+    margin-bottom: 25px; /* Espacement entre chaque ligne */
 }
 
 #experience li > span {
@@ -63,14 +118,14 @@ strong{
     text-align: justify; /* Justifie le texte */
     text-indent: 30px; /* Indente la première ligne de chaque paragraphe */
 }
+
 body{
     font-family: 'Raleway', sans-serif;
     background-color: #e3e3e3;
     max-width: 1160px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
 }
-/* Colonne du profil, formation et expérience */
 .left-side, .right-side {
     min-height: 100%;
 }
@@ -78,9 +133,6 @@ body{
     width: 70%; /* 70% de la largeur totale */
     padding: 20px;
     height: 100%;
-    list-style-type: none;
-}
-.no-bullets{
     list-style-type: none;
 }
 .left-side {
@@ -93,30 +145,49 @@ body{
 .left-side .skills li::marker {
     color: #17abb3; /* Change uniquement la couleur des puces en bleu */
 }
+.no-bullets li{
+    font-weight: 600;
+}
+
+.square {
+    margin-top: 20px; /* Espace au-dessus de la section */
+    padding: 15px;
+    background-color: #f5f5f5; /* Couleur de fond pour la section */
+}
+
+.square ul {
+    margin: 0; /* Enlever les marges par défaut */
+    padding: 0;
+}
+
+.square ul li {
+    margin: 10px 0; /* Espacement entre les éléments de la liste */
+}
+
 .skills li {
     display: flex;
     justify-content: space-between; /* Sépare le texte et les étoiles */
     align-items: center;
     width: 100%; /* Assure que chaque ligne prend toute la largeur */
     margin-bottom: 10px; /* Espacement entre les lignes */
-}
-.skills{
-    list-style-type: square;
+    font-weight: 600;
 }
 .stars {
     width: 100px;
     font-size: 1.0em; /* Ajuste la taille des étoiles */
     color: #17abb3; /* La couleur de tes étoiles */
     padding-right: 40px;
+    padding-left: 10px;
     margin-left: 10px; /* Ajoute de l'espace entre le texte et les étoiles */
     text-align: right; /* Aligne les étoiles à droite */
+    font-weight: 600;
 }
 #competences {
     display: flex;
     flex-direction: column; /* Garde l'alignement en colonne */
 }
 img{
-    height: 20px;
+    height: 25px;
 }
 footer {
     display: flex;
@@ -133,6 +204,10 @@ footer .social-icons {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+footer .social-icons img:hover {
+    transform: scale(1.2); /* Effet de zoom au survol */
 }
 footer p {
     margin-bottom: 1px; /* Réduit l'espace entre les icônes et le texte */
